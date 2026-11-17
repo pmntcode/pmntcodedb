@@ -1,0 +1,30 @@
+{
+  "name": "pmntcode/pmntcodedb",
+  "description": "Biblioteca PDO independente para PHP 8.2+ e aplica\u00e7\u00f5es MVC",
+  "type": "library",
+  "license": "MIT",
+  "require": {
+    "php": "^8.2",
+    "ext-pdo": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10.5 || ^11.0 || ^12.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "PmntCodeDB\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "PmntCodeDB\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "test": "phpunit --configuration phpunit.xml",
+    "lint": "find src tests examples -name \"*.php\" -print0 | xargs -0 -n1 php -l"
+  },
+  "suggest": {
+    "ext-pdo_sqlite": "Necess\u00e1rio para os testes de integra\u00e7\u00e3o SQLite"
+  }
+}
